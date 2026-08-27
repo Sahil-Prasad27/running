@@ -1,0 +1,973 @@
+2026-08-27 08:22:03,687 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-27 08:22:03,687 INFO [33mPress CTRL+C to quit[0m
+2026-08-27 08:23:58,638 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-27 08:23:58,638 INFO [33mPress CTRL+C to quit[0m
+2026-08-27 08:24:12,988 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-27 08:24:12,988 INFO [33mPress CTRL+C to quit[0m
+2026-08-27 08:26:55,197 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-27 08:26:55,197 INFO [33mPress CTRL+C to quit[0m
+2026-08-27 08:27:24,519 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET / HTTP/1.1" 200 -
+2026-08-27 08:27:24,640 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /static/style.css HTTP/1.1" 200 -
+2026-08-27 08:27:24,712 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /static/app.js HTTP/1.1" 200 -
+2026-08-27 08:27:24,737 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:24,737 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:24,757 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:24,816 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:24,909 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:24,909 INFO 127.0.0.1 - - [27/Aug/2026 08:27:24] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:34,581 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "GET / HTTP/1.1" 200 -
+2026-08-27 08:27:34,677 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-08-27 08:27:34,680 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "[36mGET /static/app.js HTTP/1.1[0m" 304 -
+2026-08-27 08:27:34,758 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-08-27 08:27:34,760 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:34,761 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:34,777 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:34,794 INFO 127.0.0.1 - - [27/Aug/2026 08:27:34] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:47,336 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET / HTTP/1.1" 200 -
+2026-08-27 08:27:47,384 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /static/style.css HTTP/1.1" 200 -
+2026-08-27 08:27:47,395 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /static/app.js HTTP/1.1" 200 -
+2026-08-27 08:27:47,429 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:47,441 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:47,499 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:47,534 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:47,767 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:47,770 INFO 127.0.0.1 - - [27/Aug/2026 08:27:47] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:49,770 INFO 127.0.0.1 - - [27/Aug/2026 08:27:49] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:49,776 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:49,778 INFO 127.0.0.1 - - [27/Aug/2026 08:27:49] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:49,781 INFO 127.0.0.1 - - [27/Aug/2026 08:27:49] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:49,790 INFO 127.0.0.1 - - [27/Aug/2026 08:27:49] "GET /api/records?q=&grade=&country=&format=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:27:54,058 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/wantlists HTTP/1.1" 200 -
+2026-08-27 08:27:54,062 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:54,067 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:54,067 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:54,072 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:54,825 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:27:54,959 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:54,961 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:54,963 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/records?q= HTTP/1.1" 200 -
+2026-08-27 08:27:54,967 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:54,982 INFO 127.0.0.1 - - [27/Aug/2026 08:27:54] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:55,487 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:55,487 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:55,491 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:55,493 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:55,497 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:55,511 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:55,984 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/service-tickets HTTP/1.1" 200 -
+2026-08-27 08:27:55,987 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:55,990 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:55,990 INFO 127.0.0.1 - - [27/Aug/2026 08:27:55] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:56,000 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:56,481 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:56,481 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:56,484 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/consignments HTTP/1.1" 200 -
+2026-08-27 08:27:56,488 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:56,501 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:56,885 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:56,887 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:56,894 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:27:56,907 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:27:56,918 INFO 127.0.0.1 - - [27/Aug/2026 08:27:56] "GET /api/loyalty/1 HTTP/1.1" 200 -
+2026-08-27 08:27:57,626 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:57,631 INFO 127.0.0.1 - - [27/Aug/2026 08:27:57] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:57,633 INFO 127.0.0.1 - - [27/Aug/2026 08:27:57] "GET /api/records?q=&grade=&format=&country=&min_price=&max_price=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:27:57,659 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:57,659 INFO 127.0.0.1 - - [27/Aug/2026 08:27:57] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:58,341 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:58,343 INFO 127.0.0.1 - - [27/Aug/2026 08:27:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:59,070 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:27:59,070 INFO 127.0.0.1 - - [27/Aug/2026 08:27:59] "GET /api/audit HTTP/1.1" 200 -
+2026-08-27 08:27:59,073 INFO 127.0.0.1 - - [27/Aug/2026 08:27:59] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:27:59,073 INFO 127.0.0.1 - - [27/Aug/2026 08:27:59] "GET /api/blacklist HTTP/1.1" 200 -
+2026-08-27 08:28:02,514 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:02,514 INFO 127.0.0.1 - - [27/Aug/2026 08:28:02] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:02,521 INFO 127.0.0.1 - - [27/Aug/2026 08:28:02] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:03,395 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:03,395 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:03,404 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:03,410 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:03,421 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "GET /api/records?q=&grade=&country=&format=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:28:03,913 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:03,917 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:03,922 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:03,927 INFO 127.0.0.1 - - [27/Aug/2026 08:28:03] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:05,108 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:05,112 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:05,112 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/wantlists HTTP/1.1" 200 -
+2026-08-27 08:28:05,112 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:05,129 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:05,731 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:05,733 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:05,737 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/records?q= HTTP/1.1" 200 -
+2026-08-27 08:28:05,739 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:05,750 INFO 127.0.0.1 - - [27/Aug/2026 08:28:05] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:06,231 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:06,231 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:06,239 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:06,246 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:06,255 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:06,263 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:06,791 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:06,796 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:06,797 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/service-tickets HTTP/1.1" 200 -
+2026-08-27 08:28:06,800 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:06,812 INFO 127.0.0.1 - - [27/Aug/2026 08:28:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:07,288 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:07,290 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:07,290 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/consignments HTTP/1.1" 200 -
+2026-08-27 08:28:07,296 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:07,306 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:07,759 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:07,762 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:07,767 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:07,778 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:07,786 INFO 127.0.0.1 - - [27/Aug/2026 08:28:07] "GET /api/loyalty/1 HTTP/1.1" 200 -
+2026-08-27 08:28:08,869 INFO 127.0.0.1 - - [27/Aug/2026 08:28:08] "GET /api/records?q=&grade=&format=&country=&min_price=&max_price=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:28:08,876 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:08,876 INFO 127.0.0.1 - - [27/Aug/2026 08:28:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:08,893 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:08,894 INFO 127.0.0.1 - - [27/Aug/2026 08:28:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:09,822 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:09,822 INFO 127.0.0.1 - - [27/Aug/2026 08:28:09] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:11,055 INFO 127.0.0.1 - - [27/Aug/2026 08:28:11] "GET /api/audit HTTP/1.1" 200 -
+2026-08-27 08:28:11,055 INFO 127.0.0.1 - - [27/Aug/2026 08:28:11] "GET /api/blacklist HTTP/1.1" 200 -
+2026-08-27 08:28:11,060 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:11,060 INFO 127.0.0.1 - - [27/Aug/2026 08:28:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:13,044 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:13,044 INFO 127.0.0.1 - - [27/Aug/2026 08:28:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:13,053 INFO 127.0.0.1 - - [27/Aug/2026 08:28:13] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:14,828 INFO 127.0.0.1 - - [27/Aug/2026 08:28:14] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:16,341 INFO 127.0.0.1 - - [27/Aug/2026 08:28:16] "GET /api/dashboard/export?format=pdf HTTP/1.1" 200 -
+2026-08-27 08:28:16,898 INFO 127.0.0.1 - - [27/Aug/2026 08:28:16] "[35m[1mGET /api/dashboard/export?format=pdf HTTP/1.1[0m" 206 -
+2026-08-27 08:28:16,898 INFO 127.0.0.1 - - [27/Aug/2026 08:28:16] "GET /api/dashboard/export?format=pdf HTTP/1.1" 200 -
+2026-08-27 08:28:31,631 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET / HTTP/1.1" 200 -
+2026-08-27 08:28:31,674 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /static/style.css HTTP/1.1" 200 -
+2026-08-27 08:28:31,679 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /static/app.js HTTP/1.1" 200 -
+2026-08-27 08:28:31,773 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:31,774 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:31,805 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:31,848 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:31,901 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:31,904 INFO 127.0.0.1 - - [27/Aug/2026 08:28:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:34,827 INFO 127.0.0.1 - - [27/Aug/2026 08:28:34] "POST /api/reservations/release HTTP/1.1" 200 -
+2026-08-27 08:28:34,827 INFO 127.0.0.1 - - [27/Aug/2026 08:28:34] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:38,079 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:38,080 INFO 127.0.0.1 - - [27/Aug/2026 08:28:38] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:39,711 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:39,715 INFO 127.0.0.1 - - [27/Aug/2026 08:28:39] "GET /api/records?q=&grade=&format=&country=&min_price=&max_price=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:28:39,715 INFO 127.0.0.1 - - [27/Aug/2026 08:28:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:39,737 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:39,737 INFO 127.0.0.1 - - [27/Aug/2026 08:28:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:40,172 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:40,175 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:40,175 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/consignments HTTP/1.1" 200 -
+2026-08-27 08:28:40,180 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:40,186 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:40,789 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:40,791 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:40,791 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:40,796 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:40,804 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:40,815 INFO 127.0.0.1 - - [27/Aug/2026 08:28:40] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:41,327 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:41,327 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:41,337 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:41,352 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:41,704 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/records?q= HTTP/1.1" 200 -
+2026-08-27 08:28:41,706 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:41,715 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:41,715 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:41,724 INFO 127.0.0.1 - - [27/Aug/2026 08:28:41] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:42,471 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:42,475 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:42,477 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "GET /api/wantlists HTTP/1.1" 200 -
+2026-08-27 08:28:42,480 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:42,489 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:42,968 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:42,973 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:42,979 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:42,988 INFO 127.0.0.1 - - [27/Aug/2026 08:28:42] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:43,461 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:43,465 INFO 127.0.0.1 - - [27/Aug/2026 08:28:43] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:43,468 INFO 127.0.0.1 - - [27/Aug/2026 08:28:43] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 08:28:43,484 INFO 127.0.0.1 - - [27/Aug/2026 08:28:43] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 08:28:43,493 INFO 127.0.0.1 - - [27/Aug/2026 08:28:43] "GET /api/records?q=&grade=&country=&format=&in_stock= HTTP/1.1" 200 -
+2026-08-27 08:28:44,299 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 08:28:44,299 INFO 127.0.0.1 - - [27/Aug/2026 08:28:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 08:28:44,299 INFO 127.0.0.1 - - [27/Aug/2026 08:28:44] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:47,205 INFO 127.0.0.1 - - [27/Aug/2026 08:28:47] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:47,751 INFO 127.0.0.1 - - [27/Aug/2026 08:28:47] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:51,763 INFO 127.0.0.1 - - [27/Aug/2026 08:28:51] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 08:28:54,829 INFO 127.0.0.1 - - [27/Aug/2026 08:28:54] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 09:00:51,519 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-08-27 09:00:51,519 INFO [33mPress CTRL+C to quit[0m
+2026-08-27 09:00:58,255 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET / HTTP/1.1" 200 -
+2026-08-27 09:00:58,384 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /static/style.css HTTP/1.1" 200 -
+2026-08-27 09:00:58,409 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /static/vinyl-cursor.svg HTTP/1.1" 200 -
+2026-08-27 09:00:58,420 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /static/vinyl-pointer.svg HTTP/1.1" 200 -
+2026-08-27 09:00:58,468 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /static/app.js HTTP/1.1" 200 -
+2026-08-27 09:00:58,468 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /api/health HTTP/1.1" 200 -
+2026-08-27 09:00:58,488 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /socket.io/?EIO=4&transport=polling&t=Q11HLSj HTTP/1.1" 200 -
+2026-08-27 09:00:58,490 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 09:00:58,496 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "POST /socket.io/?EIO=4&transport=polling&t=Q11HLSz&sid=liTvoIvZr6jqSYp5AAAA HTTP/1.1" 200 -
+2026-08-27 09:00:58,500 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /socket.io/?EIO=4&transport=polling&t=Q11HLS-&sid=liTvoIvZr6jqSYp5AAAA HTTP/1.1" 200 -
+2026-08-27 09:00:58,506 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:00:58,506 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:00:58,508 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:00:58,522 INFO 127.0.0.1 - - [27/Aug/2026 09:00:58] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:02,258 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:02,258 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:02,258 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:02,270 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:02,276 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "GET /api/records?q=&grade=&country=&format=&in_stock= HTTP/1.1" 200 -
+2026-08-27 09:01:02,853 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:02,856 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:02,859 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:02,862 INFO 127.0.0.1 - - [27/Aug/2026 09:01:02] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:03,246 INFO 127.0.0.1 - - [27/Aug/2026 09:01:03] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:03,251 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:03,253 INFO 127.0.0.1 - - [27/Aug/2026 09:01:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:03,257 INFO 127.0.0.1 - - [27/Aug/2026 09:01:03] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:03,267 INFO 127.0.0.1 - - [27/Aug/2026 09:01:03] "GET /api/records?q= HTTP/1.1" 200 -
+2026-08-27 09:01:04,649 INFO 127.0.0.1 - - [27/Aug/2026 09:01:04] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:04,657 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:04,658 INFO 127.0.0.1 - - [27/Aug/2026 09:01:04] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:04,662 INFO 127.0.0.1 - - [27/Aug/2026 09:01:04] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:04,672 INFO 127.0.0.1 - - [27/Aug/2026 09:01:04] "GET /api/service-tickets HTTP/1.1" 200 -
+2026-08-27 09:01:06,155 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:06,155 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:06,155 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:06,166 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:06,174 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:06,181 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:06,674 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:06,675 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:06,680 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:06,690 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:06,705 INFO 127.0.0.1 - - [27/Aug/2026 09:01:06] "GET /api/consignments HTTP/1.1" 200 -
+2026-08-27 09:01:07,617 INFO 127.0.0.1 - - [27/Aug/2026 09:01:07] "GET /api/meta HTTP/1.1" 200 -
+2026-08-27 09:01:07,622 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:07,623 INFO 127.0.0.1 - - [27/Aug/2026 09:01:07] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:07,627 INFO 127.0.0.1 - - [27/Aug/2026 09:01:07] "GET /api/records HTTP/1.1" 200 -
+2026-08-27 09:01:07,637 INFO 127.0.0.1 - - [27/Aug/2026 09:01:07] "GET /api/records?q= HTTP/1.1" 200 -
+2026-08-27 09:01:08,657 INFO 127.0.0.1 - - [27/Aug/2026 09:01:08] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 09:01:08,657 ERROR unhandled error
+Traceback (most recent call last):
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAHIL\Downloads\vintage_vinyl_marketplace\.venv\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-27 09:01:08,661 INFO 127.0.0.1 - - [27/Aug/2026 09:01:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-08-27 09:01:21,836 INFO 127.0.0.1 - - [27/Aug/2026 09:01:21] "POST /api/reservations/release HTTP/1.1" 200 -
+2026-08-27 09:01:21,838 INFO 127.0.0.1 - - [27/Aug/2026 09:01:21] "GET /api/dashboard HTTP/1.1" 200 -
+2026-08-27 09:01:28,823 INFO 127.0.0.1 - - [27/Aug/2026 09:01:28] "GET /api/health HTTP/1.1" 200 -
+2026-08-27 09:01:58,824 INFO 127.0.0.1 - - [27/Aug/2026 09:01:58] "GET /api/health HTTP/1.1" 200 -
+2026-08-27 09:01:58,824 INFO 127.0.0.1 - - [27/Aug/2026 09:01:58] "POST /api/reservations/release HTTP/1.1" 200 -
+2026-08-27 09:02:21,823 INFO 127.0.0.1 - - [27/Aug/2026 09:02:21] "POST /api/reservations/release HTTP/1.1" 200 -
+2026-08-27 09:02:21,823 INFO 127.0.0.1 - - [27/Aug/2026 09:02:21] "GET /api/dashboard HTTP/1.1" 200 -

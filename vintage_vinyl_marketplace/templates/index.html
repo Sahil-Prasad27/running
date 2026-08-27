@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vintage Vinyl - Record Store Control Room</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <strong>Vintage Vinyl</strong>
+          <span>Black Label Control Room</span>
+        </div>
+      </div>
+
+      <nav id="nav" class="nav-stack">
+        <button class="nav-btn active" data-view="dashboard"><span class="nav-index">01</span><span>Dashboard</span></button>
+        <button class="nav-btn" data-view="records"><span class="nav-index">02</span><span>Catalogue</span></button>
+        <button class="nav-btn" data-view="tradeins"><span class="nav-index">03</span><span>Trade-Ins</span></button>
+        <button class="nav-btn" data-view="wantlists"><span class="nav-index">04</span><span>Wantlists</span></button>
+        <button class="nav-btn" data-view="pos"><span class="nav-index">05</span><span>POS Checkout</span></button>
+        <button class="nav-btn" data-view="preorders"><span class="nav-index">06</span><span>Pre-orders</span></button>
+        <button class="nav-btn" data-view="service"><span class="nav-index">07</span><span>Service Queue</span></button>
+        <button class="nav-btn" data-view="consignment"><span class="nav-index">08</span><span>Consignment</span></button>
+        <button class="nav-btn" data-view="loyalty"><span class="nav-index">09</span><span>Loyalty</span></button>
+        <button class="nav-btn" data-view="search"><span class="nav-index">10</span><span>Customer Search</span></button>
+        <button class="nav-btn" data-view="import"><span class="nav-index">11</span><span>CSV Import</span></button>
+        <button class="nav-btn" data-view="audit"><span class="nav-index">12</span><span>Audit Log</span></button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="status-dot"></div>
+        <span>Database online</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <div class="eyebrow">BLACK LABEL STORE OPERATIONS</div>
+          <h1 id="page-title">Daily Sales Dashboard</h1>
+          <p class="topbar-text">A lacquer-black dashboard for listings, checkout, service, and receipt exports.</p>
+        </div>
+        <div class="top-actions">
+          <span class="pill" id="health-pill">Checking</span>
+          <span class="user-chip">Admin demo</span>
+        </div>
+      </header>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+      <section id="views">
+        <div class="view active" id="view-dashboard">
+          <section class="dashboard-hero panel">
+            <div class="hero-copy">
+              <div class="eyebrow">RED WAX OVERVIEW</div>
+              <h2>Spin daily sales, exports, and inventory from one booth.</h2>
+              <p>Fast actions for the catalogue, clean PDF exports, and a black-red storefront look that matches the brand.</p>
+              <div class="hero-actions">
+                <button class="btn primary" onclick="showView('records')">List New Arrival</button>
+                <button class="btn secondary" onclick="downloadDashboardExport('pdf')">Download Daily PDF</button>
+                <button class="btn secondary" onclick="downloadDashboardExport('csv')">Download Daily CSV</button>
+              </div>
+            </div>
+            <div class="hero-record" aria-hidden="true">
+              <div class="hero-disc"></div>
+              <div class="hero-arm"></div>
+              <div class="hero-caption">Vintage Vinyl live board</div>
+            </div>
+          </section>
+
+          <div class="toolbar">
+            <div>
+              <span class="muted">Today</span>
+              <strong id="dashboard-date"></strong>
+            </div>
+            <div class="toolbar-right">
+              <button class="btn secondary" onclick="loadDashboard()">Refresh</button>
+              <button class="btn secondary" onclick="downloadDashboardExport('pdf')">Dashboard PDF</button>
+              <button class="btn secondary" onclick="downloadDashboardExport('csv')">Dashboard CSV</button>
+              <a class="btn secondary" href="/api/export/catalogue" download="catalogue.csv">Export Catalogue CSV</a>
+            </div>
+          </div>
+
+          <div class="kpi-grid" id="kpis"></div>
+
+          <div class="grid-two">
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Hourly sales</h2>
+                <span class="muted">Store local time</span>
+              </div>
+              <div id="hourly-chart" class="bar-chart"></div>
+            </div>
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Sales by genre</h2>
+                <span class="muted">Today</span>
+              </div>
+              <div id="genre-chart" class="donut-list"></div>
+            </div>
+          </div>
+
+          <div class="grid-two">
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Top selling items</h2>
+                <span class="muted">Click a row for detail</span>
+              </div>
+              <div class="table-wrap">
+                <table id="top-items">
+                  <thead>
+                    <tr><th>Artist</th><th>Title</th><th>Qty</th><th>Total</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Low-stock alerts</h2>
+                <span class="muted">Per-item threshold</span>
+              </div>
+              <div class="table-wrap">
+                <table id="low-stock">
+                  <thead>
+                    <tr><th>Item</th><th>Bin</th><th>Price</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Consignor payouts due</h2>
+              <span class="muted">Latest payable sales</span>
+            </div>
+            <div class="table-wrap">
+              <table id="payouts">
+                <thead>
+                  <tr><th>Agreement</th><th>Consignor</th><th>Date</th><th>Payout</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-records">
+          <div class="section-head">
+            <div>
+              <h2>Catalogue and Listing</h2>
+              <p>Full catalogue, grading, pricing, and inventory intake.</p>
+            </div>
+            <button class="btn primary" onclick="scrollToId('record-form')">New Listing</button>
+          </div>
+
+          <div class="grid-two">
+            <form id="record-form" class="panel form-grid" onsubmit="saveRecord(event)">
+              <div class="form-section-title">Catalogue details</div>
+              <label>Artist *
+                <input id="r-artist" list="artist-list" required>
+                <datalist id="artist-list"></datalist>
+              </label>
+              <label>Title *
+                <input id="r-title" maxlength="200" required>
+              </label>
+              <label>Label *
+                <input id="r-label" list="label-list" required>
+                <datalist id="label-list"></datalist>
+              </label>
+              <label>Catalogue Number *
+                <input id="r-cat" maxlength="30" required>
+              </label>
+              <label>Country (ISO-2) *
+                <input id="r-country" value="US" maxlength="2" required>
+              </label>
+              <label>Year *
+                <input id="r-year" type="number" min="1948" required oninput="setDecade()">
+              </label>
+              <label>Decade
+                <input id="r-decade" readonly>
+              </label>
+              <label>Format *
+                <select id="r-format" onchange="defaultRPM()">
+                  <option value="12in_lp">12" LP</option>
+                  <option value="7in">7" Single</option>
+                  <option value="10in">10"</option>
+                  <option value="12in_maxi">12" Maxi</option>
+                  <option value="box_set">Box Set</option>
+                  <option value="picture_disc">Picture Disc</option>
+                  <option value="coloured">Coloured Vinyl</option>
+                </select>
+              </label>
+              <label>RPM *
+                <div class="radio-row">
+                  <label><input type="radio" name="rpm" value="33" checked>33</label>
+                  <label><input type="radio" name="rpm" value="45">45</label>
+                  <label><input type="radio" name="rpm" value="78">78</label>
+                </div>
+              </label>
+              <label>Mono / Stereo
+                <select id="r-mono">
+                  <option>unknown</option>
+                  <option>mono</option>
+                  <option>stereo</option>
+                  <option>quadraphonic</option>
+                </select>
+              </label>
+              <label>Matrix Side A
+                <input id="r-ma" maxlength="60" oninput="checkMatrix()">
+              </label>
+              <label>Matrix Side B
+                <input id="r-mb" maxlength="60" oninput="checkMatrix()">
+              </label>
+              <div id="duplicate-banner" class="inline-warning hidden" role="alert">Possible duplicate pressing will be shown here.</div>
+              <label>Media Grade *
+                <select id="r-media" title="Goldmine grade">
+                  <option>M</option>
+                  <option>NM</option>
+                  <option>VG+</option>
+                  <option selected>VG</option>
+                  <option>G+</option>
+                  <option>G</option>
+                  <option>F</option>
+                  <option>P</option>
+                </select>
+              </label>
+              <label>Sleeve Grade *
+                <select id="r-sleeve">
+                  <option>M</option>
+                  <option>NM</option>
+                  <option>VG+</option>
+                  <option selected>VG</option>
+                  <option>G+</option>
+                  <option>G</option>
+                  <option>F</option>
+                  <option>P</option>
+                </select>
+              </label>
+              <label class="toggle-label"><input id="r-inner" type="checkbox"> Original inner sleeve present</label>
+              <label>Asking Price *
+                <input id="r-price" inputmode="decimal" placeholder="12.50" required>
+              </label>
+              <label>Bin Code *
+                <input id="r-bin" maxlength="12" required>
+              </label>
+              <label class="toggle-label"><input id="r-neg" type="checkbox"> Negotiable</label>
+              <label>Genres
+                <input id="r-genres" placeholder="Rock, Jazz">
+              </label>
+              <label class="span-2">Inserts / Posters
+                <input id="r-inserts" placeholder="Poster; lyric sheet">
+              </label>
+              <label class="span-2">Cover Photos (JPG/PNG, 1-6, max 8MB each)
+                <input id="r-photos" type="file" accept="image/jpeg,image/png" multiple>
+              </label>
+              <label class="span-2">Notes
+                <textarea id="r-notes" maxlength="1000"></textarea>
+              </label>
+              <div class="span-2 rule-callout" id="grade-explain">Select a grade to see the Goldmine definition.</div>
+              <div class="span-2">
+                <button class="btn primary" type="submit">Save Listing</button>
+              </div>
+            </form>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Catalogue</h2>
+                <div class="search-box">
+                  <input id="catalogue-search" placeholder="Artist, title, label, catalogue, runout" oninput="handleCatalogueSearch()">
+                  <a class="icon-btn" href="/api/export/catalogue" download="catalogue.csv">CSV</a>
+                </div>
+              </div>
+              <div class="filter-row">
+                <select id="filter-grade" onchange="loadRecords()">
+                  <option value="">Any grade</option>
+                  <option>NM</option>
+                  <option>VG+</option>
+                  <option>VG</option>
+                  <option>G+</option>
+                  <option>G</option>
+                </select>
+                <select id="filter-country" onchange="loadRecords()">
+                  <option value="">Any country</option>
+                  <option>US</option>
+                  <option>GB</option>
+                  <option>DE</option>
+                  <option>JP</option>
+                </select>
+                <select id="filter-format" onchange="loadRecords()">
+                  <option value="">Any format</option>
+                  <option value="12in_lp">12" LP</option>
+                  <option value="7in">7" Single</option>
+                  <option value="coloured">Coloured</option>
+                </select>
+                <label class="checkbox"><input id="filter-stock" type="checkbox" onchange="loadRecords()"> In stock</label>
+              </div>
+              <div id="record-list" class="cards"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-tradeins">
+          <div class="section-head">
+            <div>
+              <h2>Trade-In Intake</h2>
+              <p>Evidence-first intake with valuation, compliance, and signature.</p>
+            </div>
+          </div>
+          <form class="panel" id="trade-form" onsubmit="saveTradeIn(event)">
+            <div class="form-grid compact">
+              <label>Customer<select id="t-customer"></select></label>
+              <label>Offer Mode
+                <div class="radio-row">
+                  <label><input type="radio" name="offer_mode" value="cash" checked>Cash</label>
+                  <label><input type="radio" name="offer_mode" value="store_credit">Store Credit +20%</label>
+                </div>
+              </label>
+              <label>ID Type
+                <select id="t-idtype">
+                  <option value="">Not required</option>
+                  <option value="passport">Passport</option>
+                  <option value="driving_licence">Driving Licence</option>
+                  <option value="national_id">National ID</option>
+                </select>
+              </label>
+              <label>ID Number<input id="t-idnum"></label>
+              <label class="span-2">Signature / typed fallback<input id="t-sign" placeholder="Type name to sign" required></label>
+              <label class="span-2 toggle-label"><input id="t-accept" type="checkbox"> Customer accepts offer</label>
+              <label class="span-2">Notes<textarea id="t-notes" maxlength="500"></textarea></label>
+            </div>
+            <div class="line-items" id="trade-rows"></div>
+            <button class="btn secondary" type="button" onclick="addTradeRow()">Add record row</button>
+            <div class="offer-box">
+              <div>
+                <span>Offer total</span>
+                <strong id="trade-total">$0.00</strong>
+              </div>
+              <div class="muted">Each row needs at least one condition photo. Overrides need a 20+ character reason.</div>
+            </div>
+            <button class="btn primary" type="submit">Finalise Trade-In</button>
+          </form>
+        </div>
+
+        <div class="view" id="view-wantlists">
+          <div class="section-head">
+            <div>
+              <h2>Customer Wantlists</h2>
+              <p>Match new listings and reserve items for 48 hours.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel form-grid" onsubmit="saveWantlist(event)">
+              <label>Customer<select id="w-customer"></select></label>
+              <label>Artist Query<input id="w-artist"></label>
+              <label>Title Query<input id="w-title"></label>
+              <label>Label Query<input id="w-label"></label>
+              <label>Catalogue Query<input id="w-cat"></label>
+              <label>Year From<input id="w-yf" type="number"></label>
+              <label>Year To<input id="w-yt" type="number"></label>
+              <label>Max Price<input id="w-price" inputmode="decimal"></label>
+              <label>Min Grade
+                <select id="w-grade">
+                  <option>M</option>
+                  <option>NM</option>
+                  <option>VG+</option>
+                  <option selected>VG</option>
+                  <option>G+</option>
+                  <option>G</option>
+                  <option>F</option>
+                  <option>P</option>
+                </select>
+              </label>
+              <label>Notify
+                <div class="radio-row">
+                  <label><input id="w-email" type="checkbox" checked>Email</label>
+                  <label><input id="w-sms" type="checkbox">SMS</label>
+                  <label><input id="w-push" type="checkbox">Push</label>
+                </div>
+              </label>
+              <label>Priority<input id="w-priority" type="number" value="100"></label>
+              <label class="span-2">Notes<textarea id="w-notes" maxlength="200"></textarea></label>
+              <button class="btn primary span-2" type="submit">Create Wantlist</button>
+            </form>
+
+            <div class="panel">
+              <div class="panel-head"><h2>Active and recent</h2></div>
+              <div class="table-wrap">
+                <table id="wantlist-table">
+                  <thead>
+                    <tr><th>Customer</th><th>Artist</th><th>Title</th><th>Min</th><th>Price</th><th>Active</th><th>Priority</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-pos">
+          <div class="section-head">
+            <div>
+              <h2>POS Checkout</h2>
+              <p>Inventory reservations, role-capped discounting, multi-tender, and receipt generation.</p>
+            </div>
+          </div>
+
+          <div class="grid-two">
+            <div class="panel">
+              <div class="search-box">
+                <input id="pos-search" placeholder="Search catalogue and click Add">
+                <button class="btn secondary" onclick="searchPOS()">Search</button>
+              </div>
+              <div id="pos-results" class="cards mini"></div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Cart</h2>
+                <span id="cart-count" class="pill">0 items</span>
+              </div>
+              <div id="cart-lines"></div>
+              <div class="form-grid compact">
+                <label>Customer<select id="pos-customer"><option value="">Walk-in</option></select></label>
+                <label>Order Discount %<input id="pos-discount" type="number" min="0" max="100" value="0"></label>
+                <label>Shipping<input id="pos-shipping" value="0"></label>
+                <label class="toggle-label"><input id="pos-email" type="checkbox"> Email receipt</label>
+              </div>
+              <div class="totals" id="cart-total">$0.00</div>
+              <div class="tenders">
+                <div class="panel-head">
+                  <h3>Tenders</h3>
+                  <button class="btn secondary" type="button" onclick="addTender()">Add Tender</button>
+                </div>
+                <div id="tender-lines"></div>
+              </div>
+
+              <div class="receipt-dock" id="receipt-dock">
+                <div>
+                  <div class="eyebrow">LATEST RECEIPT</div>
+                  <strong id="receipt-order-number">No completed sale yet</strong>
+                  <p id="receipt-order-meta" class="muted">Complete a checkout and the PDF receipt download will appear here.</p>
+                </div>
+                <div class="receipt-actions">
+                  <a id="receipt-pdf-link" class="btn primary is-disabled" href="#" aria-disabled="true">Download PDF</a>
+                  <a id="receipt-thermal-link" class="btn secondary is-disabled" href="#" aria-disabled="true">Thermal File</a>
+                </div>
+              </div>
+
+              <button class="btn primary full" onclick="checkout()">Save and Finalise</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-preorders">
+          <div class="section-head">
+            <div>
+              <h2>Pre-orders</h2>
+              <p>Release-day allocation, deposit policy, and international shipping.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel form-grid" onsubmit="savePreorder(event)">
+              <label>Reissue Listing<select id="po-record"></select></label>
+              <label>Customer<select id="po-customer"></select></label>
+              <label>Quantity<input id="po-qty" type="number" min="1" max="5" value="1"></label>
+              <label>Deposit Amount<input id="po-deposit" value="0"></label>
+              <label>Deposit Tender<select id="po-tender"><option>card</option><option>cash</option><option>voucher</option></select></label>
+              <label class="span-2">Ship Address<textarea id="po-address"></textarea></label>
+              <label class="span-2">Notes<textarea id="po-notes" maxlength="200"></textarea></label>
+              <button class="btn primary span-2" type="submit">Place Pre-order</button>
+            </form>
+            <div class="panel">
+              <h2>Release countdown</h2>
+              <div id="release-list" class="timeline-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-service">
+          <div class="section-head">
+            <div>
+              <h2>Turntable Service Queue</h2>
+              <p>FIFO intake, parts/labour quote recalculation, and approval workflow.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel form-grid" onsubmit="createTicket(event)">
+              <label>Customer<select id="s-customer"></select></label>
+              <label>Equipment<select id="s-equipment"><option>turntable</option><option>cartridge</option><option>amp</option><option>speaker</option><option>other</option></select></label>
+              <label>Brand<input id="s-brand" required></label>
+              <label>Model<input id="s-model" required></label>
+              <label>Serial<input id="s-serial"></label>
+              <label>Authorised Limit<input id="s-limit" value="300"></label>
+              <fieldset class="span-2 checklist">
+                <legend>Intake checklist</legend>
+                <label><input id="sc-power" type="checkbox"> Powers on</label>
+                <label><input id="sc-platter" type="checkbox"> Platter spins</label>
+                <label><input id="sc-arm" type="checkbox"> Arm balanced</label>
+                <label><input id="sc-stylus" type="checkbox"> Stylus inspected</label>
+                <label><input id="sc-cosmetic" type="checkbox"> Cosmetic damage noted</label>
+              </fieldset>
+              <label class="span-2">Cosmetic Photos<input id="s-photos" type="file" accept="image/jpeg,image/png" multiple></label>
+              <label class="span-2">Symptoms<textarea id="s-symptoms" maxlength="500" required></textarea></label>
+              <label class="span-2">Notes<textarea id="s-notes" maxlength="1000"></textarea></label>
+              <button class="btn primary span-2" type="submit">Create Service Ticket</button>
+            </form>
+            <div class="panel"><div id="service-list"></div></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-consignment">
+          <div class="section-head">
+            <div>
+              <h2>Consignment Agreements</h2>
+              <p>Versioned, signed agreements with tiered payouts and sale floors.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel form-grid" onsubmit="saveConsignment(event)">
+              <label>Consignor<select id="c-consignor"></select></label>
+              <label>Effective Date<input id="c-date" type="date" value=""></label>
+              <label>Default Payout %<input id="c-payout" value="60"></label>
+              <label>Auto Return Days<input id="c-return" type="number" value="180" min="30" max="730"></label>
+              <label>Statement Frequency<select id="c-freq"><option>monthly</option><option>quarterly</option></select></label>
+              <label class="toggle-label"><input id="c-floor" type="checkbox" checked> Sale floor enabled</label>
+              <label class="span-2">Signature<input id="c-sign" required placeholder="Type name to sign"></label>
+              <div class="span-2">
+                <div class="tier-editor" id="tier-editor">
+                  <div class="tier-row"><input placeholder="From" value="0"><input placeholder="To" value="30"><input placeholder="%" value="60"></div>
+                  <div class="tier-row"><input placeholder="From" value="31"><input placeholder="To" value="90"><input placeholder="%" value="55"></div>
+                  <div class="tier-row"><input placeholder="From" value="91"><input placeholder="To" value="180"><input placeholder="%" value="50"></div>
+                </div>
+                <button type="button" class="btn secondary" onclick="addTier()">Add Tier</button>
+              </div>
+              <label class="span-2">Notes<textarea id="c-notes" maxlength="500"></textarea></label>
+              <button class="btn primary span-2" type="submit">Finalise Agreement</button>
+            </form>
+
+            <div class="panel">
+              <div class="table-wrap">
+                <table id="cons-table">
+                  <thead>
+                    <tr><th>Agreement</th><th>Consignor</th><th>Payout</th><th>Frequency</th><th>Status</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-loyalty">
+          <div class="section-head">
+            <div>
+              <h2>Loyalty Points</h2>
+              <p>Balance, tier progress, expiry, and insert-only ledger.</p>
+            </div>
+          </div>
+          <div class="toolbar">
+            <label>Customer<select id="loyal-customer" onchange="loadLoyalty()"></select></label>
+            <a id="loyal-export" class="btn secondary" href="#">Export CSV</a>
+          </div>
+          <div id="loyalty-card" class="kpi-grid"></div>
+          <div class="grid-two">
+            <div class="panel">
+              <div class="panel-head"><h2>Transaction history</h2></div>
+              <div class="table-wrap">
+                <table id="loyal-table">
+                  <thead>
+                    <tr><th>Timestamp</th><th>Source</th><th>Points</th><th>Note</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="panel">
+              <h2>Redeem</h2>
+              <form onsubmit="redeemPoints(event)" class="form-grid compact">
+                <label>Points<input id="redeem-points" type="number" step="10" value="100"></label>
+                <label>Reward<input id="redeem-reward" value="$1 discount"></label>
+                <button class="btn primary" type="submit">Redeem</button>
+              </form>
+              <div class="rule-callout">Redemption rounds to the nearest whole reward unit and never updates ledger rows in place.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-search">
+          <div class="section-head">
+            <div>
+              <h2>Customer Search</h2>
+              <p>Filter by genre, decade, format, country, condition, and stock.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="search-box big">
+              <input id="search-input" placeholder="Search artist / title / label / catalogue / runout" oninput="handleCustomerSearch()">
+              <button class="btn secondary" onclick="loadCustomerSearch()">Search</button>
+            </div>
+            <div class="filter-row">
+              <label>Grade<select id="s-grade" onchange="loadCustomerSearch()"><option value="">Any</option><option>NM</option><option>VG+</option><option>VG</option><option>G+</option></select></label>
+              <label>Format<select id="s-format" onchange="loadCustomerSearch()"><option value="">Any</option><option value="12in_lp">12" LP</option><option value="7in">7" Single</option><option value="coloured">Coloured</option></select></label>
+              <label>Country<select id="s-country" onchange="loadCustomerSearch()"><option value="">Any</option><option>US</option><option>GB</option><option>DE</option></select></label>
+              <label>Min $<input id="s-min" onchange="loadCustomerSearch()"></label>
+              <label>Max $<input id="s-max" onchange="loadCustomerSearch()"></label>
+              <label class="checkbox"><input id="s-stock" type="checkbox" onchange="loadCustomerSearch()"> In Stock</label>
+            </div>
+            <div id="search-results" class="cards"></div>
+          </div>
+        </div>
+
+        <div class="view" id="view-import">
+          <div class="section-head">
+            <div>
+              <h2>CSV Import and Export</h2>
+              <p>UTF-8 BOM tolerant, delimiter sniffing, dry-run validation, and per-row errors.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel" onsubmit="importCsv(event)">
+              <h3>Import catalogue</h3>
+              <input id="csv-file" type="file" accept=".csv,text/csv" required>
+              <label class="checkbox"><input id="dry-run" type="checkbox"> Dry run - validate without DB writes</label>
+              <button class="btn primary" type="submit">Run Import</button>
+              <div id="import-report" class="import-report"></div>
+            </form>
+            <div class="panel">
+              <h3>Export catalogue</h3>
+              <p class="muted">Excel-friendly UTF-8 BOM output.</p>
+              <a class="btn secondary" href="/api/export/catalogue" download="catalogue.csv">Download catalogue.csv</a>
+              <div class="rule-callout">Import processes rows in chunks of 5,000 and writes a sibling errors log.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="view-audit">
+          <div class="section-head">
+            <div>
+              <h2>Audit and Counterfeit Blacklist</h2>
+              <p>Append-only audit trail and matrix/runout protection.</p>
+            </div>
+          </div>
+          <div class="grid-two">
+            <form class="panel form-grid" onsubmit="addBlacklist(event)">
+              <label>Matrix A *<input id="b-a" required></label>
+              <label>Matrix B<input id="b-b"></label>
+              <label>Artist<input id="b-artist"></label>
+              <label>Title<input id="b-title"></label>
+              <label class="span-2">Reason<textarea id="b-reason" required></textarea></label>
+              <label class="span-2">Source Authority<input id="b-source" required></label>
+              <button class="btn primary span-2" type="submit">Add Active Blacklist Entry</button>
+            </form>
+            <div class="panel">
+              <h3>Active blacklist</h3>
+              <div class="table-wrap">
+                <table id="blacklist-table">
+                  <thead>
+                    <tr><th>Matrix</th><th>Title</th><th>Reason</th><th>Added</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Recent audit events</h3>
+            <div class="table-wrap">
+              <table id="audit-table">
+                <thead>
+                  <tr><th>When</th><th>Entity</th><th>Action</th><th>Actor</th><th>Context</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" defer></script>
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</body>
+</html>
